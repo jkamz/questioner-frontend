@@ -1,0 +1,181 @@
+ /*Reset CSS*/
+ * {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+     text-decoration: none;
+ }
+
+ body {
+     font-family: 'Ubuntu', sans-serif;
+     background-color: #f0f0f0;
+ }
+
+ /*Header*/
+
+ header {
+     background-color: #D4E6F1;
+     width: 100%;
+     height: 100px;
+ }
+
+ .logo {
+     display: block;
+     margin: 0 auto;
+     padding: 20px 0;
+     text-align: center;
+ }
+
+ header nav ul {
+     display: block;
+     margin: 0 auto;
+     width: fit-content;
+ }
+
+ header nav ul li {
+     display: inline-block;
+     float: right;
+     list-style: none;
+     padding: 0 14px;
+ }
+
+ header nav ul li a {
+     font-size: 18px;
+     color: #111;
+ }
+
+ header a img {
+     height: 30px;
+ }
+
+ @media only screen and (min-width: 1000px) {
+     header {
+         height: 80px;
+     }
+
+     header .logo {
+         margin: 0;
+         text-align: left;
+         padding: 20px 20px 20px 10px;
+         float: left;
+     }
+
+     header nav ul {
+         margin: 0;
+         float: right;
+         margin-right: 30px;
+     }
+
+
+     header nav ul li a {
+         line-height: 70px;
+         margin-right: 10px;
+         text-transform: uppercase;
+     }
+ }
+
+ /*Index*/
+
+ .banner {
+     width: 100%;
+     background-image: url(../images/banner.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     display: table;
+     height: 300px;
+ }
+
+ .banner h1 {
+     font-style: 'Ubuntu';
+     font-size: 30px;
+     color: #fff;
+     text-align: center;
+     text-shadow: 3px 3px 9px #000;
+ }
+
+ .banner h3 {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 18px;
+     color: #fff;
+     text-align: center;
+     text-shadow: 3px 3px 9px #000;
+ }
+
+ .text-vertical {
+     display: table-cell;
+     vertical-align: middle;
+ }
+
+ .box {
+     margin: 5px 5px 0;
+     width: calc(100% - 10px);
+     height: 120px;
+     background-color: #D4E6F1;
+ }
+
+ .box h2 {
+     font-size: 24px;
+     line-height: 120px;
+     text-align: center;
+     text-transform: uppercase;
+ }
+
+ @media only screen and (min-width: 1000px) {
+     .banner {
+         height: 250px;
+     }
+ }
+
+
+ /*Footer*/
+
+ footer {
+     width: calc(100% - 40px);
+     padding: 20px 20px;
+     margin-top: 10px;
+     background-color: #add8e6;
+     overflow: hidden;
+     height: 230px;
+ }
+
+ footer ul {
+     width: fit-content;
+     float: left;
+     padding-left: 25px;
+ }
+
+ footer ul li {
+     display: block;
+     list-style: none;
+     font-size: 20px;
+     font-weight: 700;
+     /*text-align: center;*/
+ }
+
+ footer ul li a {
+     font-size: 18px;
+     color: #000;
+     line-height: 40px;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 500;
+ }
+
+ .footer-user-account {}
+
+ .footer-latest-meetups {
+     display: none;
+ }
+
+ .social {
+     float: right;
+     width: 50px;
+ }
+
+ .social img {
+     width: 100%;
+     margin-bottom: 8px;
+ }
