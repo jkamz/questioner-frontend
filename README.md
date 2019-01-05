@@ -26,6 +26,7 @@ A Browser
 Clone the repo to local machine and navigate into the folder
 
 `$ git clone https://github.com/jkamz/Questioner`
+
 `$ cd Questioner`
 
 Open the `index.html` file
