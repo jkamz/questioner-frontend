@@ -338,7 +338,7 @@
 
  .banner-meetup {
      width: 100%;
-     background-image: url(../images/banner.jpg);
+     background-image: url(../images/code.jpg);
      background-repeat: no-repeat;
      background-position: center;
      background-size: cover;
@@ -350,7 +350,7 @@
      font-style: 'Ubuntu';
      font-size: 28px;
      font-weight: bold;
-     color: #fff;
+     color: #111;
      text-align: center;
      text-shadow: 3px 3px 9px #000;
  }
@@ -358,26 +358,30 @@
  .host {
      margin-top: 10px;
      font-size: 20px;
-     color: #03f451;
+     color: #111;
  }
 
- .host span a {
-     color: #000;
- }
+.host span {
+    color: #111;
+}
 
  .meetup-info {
      text-align: center;
  }
 
  details {
-    font-size: 16px;
+    font-size: 18px;
      margin: 1rem;
      text-align: left;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
  }
 
  summary {
     font-size: 18px;
      font-weight: bold;
+     color: #111;
  }
 
  .questions {
