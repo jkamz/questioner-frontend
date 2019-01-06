@@ -361,25 +361,25 @@
      color: #111;
  }
 
-.host span {
-    color: #111;
-}
+ .host span {
+     color: #111;
+ }
 
  .meetup-info {
      text-align: center;
  }
 
  details {
-    font-size: 18px;
+     font-size: 18px;
      margin: 1rem;
      text-align: left;
-    color: #fff;
-    font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+     color: #fff;
+     font-weight: 600;
+     font-family: 'Open Sans', sans-serif;
  }
 
  summary {
-    font-size: 18px;
+     font-size: 18px;
      font-weight: bold;
      color: #111;
  }
@@ -506,5 +506,62 @@
          font-size: 20px;
          color: #f0f0f0;
          font-weight: bold;
+     }
+ }
+
+ /*Comments*/
+
+ .question-comments {
+     display: grid;
+     grid-template-columns: 1fr 1fr 7fr;
+     grid-auto-rows: 100px;
+ }
+ .comments-container {
+     /*font: 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+     color: #222;
+ }
+
+ div.comments-container {
+     width: 350px;
+     margin: 5em auto;
+ }
+
+ .comments-container>ul,
+ li {
+     list-style: none;
+ }
+
+ ul.nested-comment li {
+     margin-left: 3em;
+ }
+
+ div.comment {
+     background-color: #f0f0f0;
+     border: 1px solid #999;
+     padding: .5em;
+     margin-bottom: 1em;
+ }
+
+ em {
+     font-size: 0.75em;
+ }
+
+ ul.nested-comment li ul {
+     border-left: 1px solid #999;
+     position: relative;
+ }
+
+ ul.nested-comment li ul::before {
+     content: '';
+     border-bottom: 1px solid #999;
+     position: absolute;
+     width: 2em;
+     top: 2em;
+ }
+
+ @media only screen and (min-width: 1000px) {
+     div.comments-container {
+         width: 800px;
+         margin: 5em auto;
      }
  }
