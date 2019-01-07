@@ -278,6 +278,20 @@
      box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
  }
 
+ #form-container-question {
+     width: 330px;
+     height: 185px;
+     margin-top: -200px;
+     margin-left: -160px;
+     top: 50%;
+     left: 50%;
+     position: fixed;
+     background: #999;
+     border-radius: 3px;
+     border: 1px solid #ccc;
+     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+ }
+
  label {
      display: inline-block;
      margin-left: 18px;
@@ -317,6 +331,23 @@
      color: #000;
  }
 
+ #post-question {
+     background: #999;
+     width: 100%;
+     height: 80px;
+     margin-top: 20px;
+     color: #000;
+ }
+
+ h1 {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 18px;
+     color: #111;
+     text-align: center;
+     text-shadow: 3px 3px 9px #000;
+     margin:-5px;
+ }
+
  input[type=checkbox] {
      margin-left: 20px;
      margin-top: 30px;
@@ -330,7 +361,7 @@
      float: right;
      margin-right: 20px;
      margin-top: 20px;
-     width: 80px;
+     width: 100px;
      height: 30px;
  }
 
