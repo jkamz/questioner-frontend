@@ -516,6 +516,7 @@
      grid-template-columns: 1fr 1fr 7fr;
      grid-auto-rows: 100px;
  }
+
  .comments-container {
      /*font: 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
      color: #222;
@@ -564,4 +565,17 @@
          width: 800px;
          margin: 5em auto;
      }
+ }
+
+ /*Profile*/
+ .profile-footer {
+     background-color: #7FB3D5;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+     color: #EAF2F8;
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     text-align: center;
+     height: 20px;
  }
