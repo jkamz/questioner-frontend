@@ -516,6 +516,7 @@
      grid-template-columns: 1fr 1fr 7fr;
      grid-auto-rows: 100px;
  }
+
  .comments-container {
      /*font: 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
      color: #222;
@@ -563,5 +564,175 @@
      div.comments-container {
          width: 800px;
          margin: 5em auto;
+     }
+ }
+
+ /*Profile*/
+ .profile-footer {
+     background-color: #7FB3D5;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+     color: #EAF2F8;
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     text-align: center;
+     height: 20px;
+ }
+
+ #profile {
+     margin-bottom: 10px;
+     background-color: #ecf2f5;
+     border-radius: 25px;
+     /*width: 635px;*/
+     /*border: 1px solid red;*/
+ }
+
+ #avatar {
+
+     float: left;
+     width: 200px;
+     text-align: center;
+     margin-right: 20px;
+     /*border: 1px solid brown;*/
+
+ }
+
+ #Photo {
+
+     width: 100px;
+     height: 100px;
+     background-image: url(../images/profile.png);
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-size: cover;
+     margin-left: 60%;
+     margin-bottom: 10%;
+     /*border: 1px solid green;*/
+ }
+
+ #PhotoOptions {
+     text-align: center;
+     width: 200px;
+     /*border: 1px solid brown;*/
+ }
+
+ #data {
+     width: 370px;
+     text-align: center;
+     float: right;
+     margin-top: 20px;
+     /*border: 1px solid blue;*/
+ }
+
+ #data h3 {
+     font-size: 18px;
+     text-align: center;
+     color: #000;
+     text-align: center;
+     text-shadow: 4px 4px 9px #fff;
+
+ }
+
+ #data strong {
+     /* Give it a width */
+     display: inline-block;
+     width: 150px;
+     text-align: left;
+     margin-left: 20px;
+ }
+
+ #data span {
+     display: inline-block;
+     width: 150px;
+     text-align: justify;
+     padding-left: 5px;
+     margin-left: 30px;
+ }
+
+ #feed-title {
+     font-style: 'Ubuntu';
+     font-size: 30px;
+     color: #fff;
+     text-align: center;
+     text-shadow: 3px 3px 9px #000;
+ }
+
+ .userdetails {
+     background-color: #999;
+     border-radius: 25px;
+     margin: 4px;
+ }
+
+ .userdetails span {
+     background-color: #999;
+     border-radius: 25px;
+     color: blue;
+     /*margin-right: 10px;*/
+ }
+
+ .userstats {
+     background-color: #999;
+     border-radius: 25px;
+     margin: 4px;
+ }
+
+ .userstats span {
+     background-color: #999;
+     border-radius: 25px;
+     color: blue;
+ }
+
+ @media only screen and (min-width: 1000px) {
+     #profile {
+         margin-bottom: 0;
+         margin: 20px auto;
+         width: 635px;
+
+         /*border: 1px solid red;*/
+     }
+
+     #Photo {
+         width: 200px;
+         height: 200px;
+         margin-left: 0;
+         margin-bottom: 0;
+     }
+
+     #data {
+         width: 390px;
+         text-align: center;
+         float: right;
+         /*border: 1px solid blue;*/
+     }
+
+     #data strong {
+         display: inline;
+         width: 180px;
+         text-align: right;
+         font-size: 20px;
+         /*border: 1px solid orange;*/
+     }
+
+     #data span {
+         display: inline-block;
+         width: 180px;
+         text-align: center;
+         /*padding-left: 5px;*/
+         margin-left: 10px;
+         font-size: 20px;
+         /*border: 1px solid purple;*/
+     }
+
+     .userdetails {
+         background-color: #999;
+         border-radius: 25px;
+     }
+
+     #userdetails span {}
+
+     .userstats span {
+         background-color: #999;
+         border-radius: 25px;
      }
  }
