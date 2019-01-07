@@ -521,6 +521,17 @@
      width: 100%;
  }
 
+  .add-meetup-button {
+     background-color: #4682b4;
+     height: 3em;
+     font-size: 16px;
+     border: solid #ccc;
+     color: #000;
+     width: 25%;
+     margin-left: 37.5%;
+     margin-top: 20px;
+ }
+
  @media only screen and (min-width: 1000px) {
      .question {
          display: grid;
