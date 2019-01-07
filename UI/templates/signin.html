@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questioner | Welcome</title>
+    <title>Questioner | Signin</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
 </head>
@@ -16,21 +16,21 @@
         </a>
         <nav>
             <ul>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a class="state" href="signup.html">Sign Up</a></li>
                 <li><a href="index.html">Home</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div id="form-container">
-            <form>
+            <form action="index.html">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password">
                 <div id="login">
-                    <input type="checkbox"><label for="checkbox">Sign in as Admin</label>
-                    <input type="submit" value="Login">
+                    <input type="checkbox" id="adminCheck"><label for="checkbox">Sign in as Admin</label>
+                    <input type="submit" onclick="logInAdmin()" value="Login">
                 </div>
                 <div id="signup-text">
                     <p>Don't have an account yet? <a href="signup.html">Sign Up</a></p>
@@ -38,6 +38,7 @@
             </form>
         </div>
     </main>
+<script type="text/javascript" src="../static/js/script.js"></script>
 </body>
 
 </html>
