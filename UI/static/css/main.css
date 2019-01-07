@@ -579,3 +579,127 @@
      text-align: center;
      height: 20px;
  }
+
+ #profile {
+     margin: 10px auto;
+     background-color: #f0f0f0;
+     padding: 10px;
+     /*width: 635px;*/
+     /*border: 1px solid red;*/
+ }
+
+ #avatar {
+
+     float: left;
+     width: 200px;
+     text-align: center;
+     margin-right: 20px;
+     /*border: 1px solid brown;*/
+
+ }
+
+ #Photo {
+
+     width: 100px;
+     height: 100px;
+     background-image: url(../images/profile.png);
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-size: cover;
+     margin-left: 60%;
+     margin-bottom: 10%;
+     /*border: 1px solid green;*/
+ }
+
+ #PhotoOptions {
+     text-align: center;
+     width: 200px;
+     /*border: 1px solid brown;*/
+ }
+
+ #data {
+     width: 400px;
+     text-align: center;
+     float: right;
+     margin-top: 40px;
+     /*border: 1px solid blue;*/
+ }
+
+ #data p h3 {
+    font-size: 18px;
+    text-align: center;
+
+ }
+
+ #data strong {
+     /* Give it a width */
+     display: inline-block;
+     width: 150px;
+     text-align: left;
+     margin-left: 20px;
+     /*border: 1px solid orange;*/
+ }
+
+ #data span {
+     display: inline-block;
+     width: 150px;
+     text-align: justify;
+     padding-left: 5px;
+     margin-left: 30px;
+     /*border: 1px solid purple;*/
+ }
+
+ #feed-title {
+     font-style: 'Ubuntu';
+     font-size: 30px;
+     color: #fff;
+     text-align: center;
+     text-shadow: 3px 3px 9px #000;
+ }
+
+ #userdetails {
+    background-color: #999;
+ }
+
+  #userstats {
+    background-color: #999;
+ }
+
+ @media only screen and (min-width: 1000px) {
+     #profile {
+         margin: 20px auto;
+         width: 635px;
+         /*border: 1px solid red;*/
+     }
+
+     #Photo {
+         width: 200px;
+         height: 200px;
+         margin-left: 0;
+         margin-bottom: 0;
+     }
+
+     #data {
+         width: 400px;
+         text-align: center;
+         float: right;
+         /*border: 1px solid blue;*/
+     }
+
+     #data strong {
+         display: inline-block;
+         width: 180px;
+         text-align: right;
+         font-size: 22px;
+         /*border: 1px solid orange;*/
+     }
+
+     #data span {
+         display: inline-block;
+         width: 180px;
+         text-align: justify;
+         padding-left: 5px;
+         margin-left: 10px;
+         font-size: 20px;
+         /*border: 1px solid purple;*/
+     }
