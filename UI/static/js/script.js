@@ -25,21 +25,6 @@ function hideCreateButton(argument) {
 
 }
 
-function logInAdmin(argument) {
-    var checkBox = document.getElementById('adminCheck');
-    var input = 'Admin';
-    var input2 = 'John Doe';
-
-    if (checkBox.checked == true) {
-
-        localStorage.setItem("userName", input);
-
-    } else {
-
-        localStorage.setItem("userName", input2);
-    }
-}
-
 
 
 window.onload = hideCreateButton;
