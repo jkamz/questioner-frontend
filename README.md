@@ -8,7 +8,7 @@ The project is managed using [Pivotal Tracker](https://www.pivotaltracker.com) a
 
 ## Site link
 
-https://jkamz.github.io/Questioner/UI/templates/index.html
+https://jkamz.github.io/questioner-frontend/UI/templates/index.html
 
 ## Features
 
@@ -33,7 +33,7 @@ Clone the repo to local machine and navigate into the folder
 
 `$ cd Questioner`
 
-Open the `index.html` file
+Open the `index.html` file on browser
 
 ## Author
 
