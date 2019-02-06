@@ -24,24 +24,27 @@
     <main>
         <div id="form-container-signup">
             <form>
-                <label for="email">Email Adress:</label>
-                <input type="email" id="email" name="email">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-                <label for="password">Confirm Password:</label>
-                <input type="password" id="passwordconfirm" name="passwordconfirm">
-                <div id="login">
+                <fieldset>
+                    <p><input type="text" id="firstname" placeholder="First Name" required=""></p>
+                    <p><input type="text" id="lastname" placeholder="Last Name" required></p>
+                    <p><input type="email" id="email" placeholder="Email" required></p>
+                    <p><input type="text" id="username" placeholder="Username" required></p>
+                    <p><input type="text" id="phonenumber" placeholder="Phone Number" required></p>
+                    <p><input type="password" id="password" placeholder="Password" required minlength="8"></p>
+                    <p><input type="password" id="passwordconfirm" placeholder="Confirm Password" required></p>
+                </fieldset>
+                <div id="signup">
                     <!-- <input type="checkbox"><label for="checkbox">Sign in as Admin</label> -->
-                    <input type="submit" value="Signup">
-                </div>
-                <div id="signup-text">
-                    <p>Already registered? <a href="signup.html">Sign In</a></p>
+                    <input type="submit" value="Signup" id="signupBtn" onclick="Validate()">
                 </div>
             </form>
+            <div id="signup-text">
+                <p>Already registered? <a href="signin.html">Sign In</a></p>
+            </div>
         </div>
     </main>
+    <script type="text/javascript" src="../static/js/script.js"></script>
+    <script type="text/javascript" src="../static/js/auth.js"></script>
 </body>
 
 </html>

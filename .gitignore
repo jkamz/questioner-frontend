@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#js
+node_modules/
+.eslintrc.json
+package.json
+package-lock.json

@@ -252,7 +252,7 @@
 
  #form-container {
      width: 330px;
-     height: 285px;
+     /*height: 285px;*/
      margin-top: -200px;
      margin-left: -160px;
      top: 50%;
@@ -265,9 +265,9 @@
  }
 
  #form-container-signup {
-     width: 330px;
-     height: 385px;
-     margin-top: -200px;
+/*      width: 330px;
+height: 590px; */
+     margin-top: -230px;
      margin-left: -160px;
      top: 50%;
      left: 50%;
@@ -277,6 +277,8 @@
      border: 1px solid #ccc;
      box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
  }
+
+
 
  #form-container-question {
      width: 330px;
@@ -314,11 +316,19 @@
      color: #fff
  }
 
- #signup-text p {
-     padding-top: 10px;
-     padding-left: 30px;
+
+ #signup-text {
+     padding: 10px;
+     text-align: center;
+     color: #fff;
+     text-decoration: none;
+
  }
 
+ #signup-text a {
+    color: #fff;
+    text-decoration: underline;
+}
  input {
      font-family: "Helvetica Neue", Helvetica, sans-serif;
      font-size: 14px;
@@ -331,11 +341,20 @@
      color: #000;
      padding-left: 10px;
      margin: 10px;
-     margin-top: 12px;
+     margin-top: 10px;
      margin-left: 18px;
      width: 290px;
      height: 35px;
  }
+
+ input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
 
  #login {
      background: #222;
@@ -344,6 +363,15 @@
      margin-top: 20px;
      color: #000;
  }
+
+  #signup {
+     background: #222;
+     width: 100%;
+     height: 50px;
+     margin-top: 10px;
+     color: #000;
+ }
+
 
  #post-question {
      background: #999;
@@ -370,10 +398,7 @@
      margin: -5px;
  }
 
- input[type=checkbox] {
-     margin-left: 20px;
-     margin-top: 30px;
- }
+
 
  .check {
      margin-left: 3px;
@@ -382,7 +407,7 @@
  input[type=submit] {
      float: right;
      margin-right: 20px;
-     margin-top: 20px;
+     margin-top: 10px;
      width: 100px;
      height: 30px;
  }
@@ -592,6 +617,8 @@
          color: #f0f0f0;
          font-weight: bold;
      }
+
+
  }
 
  /*Comments*/
@@ -821,3 +848,9 @@
          border-radius: 25px;
      }
  }
+
+.input-l label, .input-l input {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
