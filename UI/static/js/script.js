@@ -1,3 +1,25 @@
+// Email validation message
+
+var email = document.getElementById("email");
+
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("Not valid email");
+  } else {
+    email.setCustomValidity("");
+  }
+});
+
+
+function Validate() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("passwordconfirm").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
 /*function hideCreateButton(argument) {
     x = localStorage.getItem('userName');
     document.getElementById('user').innerHTML = x;
