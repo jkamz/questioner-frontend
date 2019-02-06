@@ -1,4 +1,4 @@
-function hideCreateButton(argument) {
+/*function hideCreateButton(argument) {
     x = localStorage.getItem('userName');
     document.getElementById('user').innerHTML = x;
 
@@ -27,4 +27,4 @@ function hideCreateButton(argument) {
 
 
 
-window.onload = hideCreateButton;
+window.onload = hideCreateButton;*/
