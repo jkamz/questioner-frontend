@@ -1,26 +1,32 @@
 // Email validation message
 
-var email = document.getElementById("email");
+const email = document.getElementById('email');
 
-email.addEventListener("input", function (event) {
-  if (email.validity.typeMismatch) {
-    email.setCustomValidity("Not valid email");
-  } else {
-    email.setCustomValidity("");
-  }
+email.addEventListener('input', function () {
+    if (email.validity.typeMismatch) {
+        email.setCustomValidity('Not valid email');
+    } else {
+        email.setCustomValidity('');
+    }
 });
 
 
 function Validate() {
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("passwordconfirm").value;
-        if (password != confirmPassword) {
-            alert("Passwords do not match.");
-            return false;
-        }
-        return true;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('passwordconfirm').value;
+    if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return false;
     }
-/*function hideCreateButton(argument) {
+    return true;
+}
+
+window.onload = function () {
+    document.getElementById('signupBtn').addEventListener('click', Validate);
+};
+
+
+/* function hideCreateButton(argument) {
     x = localStorage.getItem('userName');
     document.getElementById('user').innerHTML = x;
 
@@ -47,6 +53,4 @@ function Validate() {
 
 }
 
-
-
-window.onload = hideCreateButton;*/
+window.onload = hideCreateButton; */

@@ -1,38 +1,46 @@
 // Methods to consume signup and signin API using Fetch API
-import Model from './model.js';
 
-
-
-//SignUp
+// SignUp
+const signup = document.getElementById('signupBtn');
 
 function signUp(event) {
-
-    event.preventDefault()
-    var endpoint = "/auth/signup";
-    signupObj = new Model(endpoint);
+    event.preventDefault();
+    const url = 'https://questionerandela.herokuapp.com/api/v2/auth/signup';
 
     const fieldData = {
-        firstname:document.getElementById('firstname').value,
-        lastname:document.getElementById('lastname').value,
-        email:document.getElementById('email').value,
-        username:document.getElementById('username').value,
-        phoneNumber:document.getElementById('phoneNumber').value,
-        password:document.getElementById('password').value
+        firstname: document.getElementById('firstname').value,
+        lastname: document.getElementById('lastname').value,
+        email: document.getElementById('email').value,
+        username: document.getElementById('username').value,
+        phoneNumber: document.getElementById('phonenumber').value,
+        password: document.getElementById('password').value,
     };
 
-    signupObj.postMethod(fieldData)
-    .then(function(response){
-        console.log(response);
-        return response.json()
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(fieldData),
+        headers: {
+            'content-type': 'application/json',
+        },
     })
-    .then(function(data){
-        console.log(data);
-        window.location.href = "../UI/templates/signin.html";
-    })
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            console.log(data);
+
+            if (data.status === 201) {
+                window.location.href = '../templates/signin.html';
+            } else {
+                window.alert(data.message);
+            }
+        })
+        .catch(function (error) {
+            console.error(error)
+        });
 }
 
-//call functions
+// call functions
 
-window.onload = function(){
-    document.getElementById(signupBtn).addEventListener('click', signUp);
-}
+
+signup.addEventListener('click', signUp);
