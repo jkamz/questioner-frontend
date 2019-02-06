@@ -23,20 +23,17 @@ function signUp(event) {
             'content-type': 'application/json',
         },
     })
-        .then(function (response) {
-            return response.json()
-        })
-        .then(function (data) {
+        .then(response => response.json())
+        .then((data) => {
             console.log(data);
-
             if (data.status === 201) {
                 window.location.href = '../templates/signin.html';
             } else {
                 window.alert(data.message);
             }
         })
-        .catch(function (error) {
-            console.error(error)
+        .catch((error) => {
+            console.error(error);
         });
 }
 
