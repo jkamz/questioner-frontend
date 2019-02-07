@@ -561,7 +561,7 @@ height: 590px; */
  }
 
  .delete-meetup-button {
-    visibility: hidden;
+     visibility: hidden;
      background-color: red;
      height: 2.6em;
      font-size: 14px;
