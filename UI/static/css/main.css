@@ -265,7 +265,7 @@
  }
 
  #form-container-signup {
-/*      width: 330px;
+     /*      width: 330px;
 height: 590px; */
      margin-top: -230px;
      margin-left: -160px;
@@ -326,9 +326,10 @@ height: 590px; */
  }
 
  #signup-text a {
-    color: #fff;
-    text-decoration: underline;
-}
+     color: #fff;
+     text-decoration: underline;
+ }
+
  input {
      font-family: "Helvetica Neue", Helvetica, sans-serif;
      font-size: 14px;
@@ -348,12 +349,12 @@ height: 590px; */
  }
 
  input:invalid {
-  border: 2px solid red;
-}
+     border: 2px solid red;
+ }
 
-input:valid {
-  border: 2px solid green;
-}
+ input:valid {
+     border: 2px solid green;
+ }
 
 
  #login {
@@ -364,7 +365,7 @@ input:valid {
      color: #000;
  }
 
-  #signup {
+ #signup {
      background: #222;
      width: 100%;
      height: 50px;
@@ -547,6 +548,7 @@ input:valid {
  }
 
  .add-meetup-button {
+     display: none;
      background-color: #4682b4;
      height: 3em;
      font-size: 16px;
@@ -559,6 +561,7 @@ input:valid {
  }
 
  .delete-meetup-button {
+    visibility: hidden;
      background-color: red;
      height: 2.6em;
      font-size: 14px;
@@ -849,8 +852,9 @@ input:valid {
      }
  }
 
-.input-l label, .input-l input {
-    float: none;
-    display: inline-block;
-    vertical-align: middle;
-}
+ .input-l label,
+ .input-l input {
+     float: none;
+     display: inline-block;
+     vertical-align: middle;
+ }
