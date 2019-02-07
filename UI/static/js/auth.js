@@ -1,4 +1,4 @@
-// Methods to consume signup and signin API using Fetch API
+// Methods to consume signup API using Fetch API
 
 // SignUp
 const signup = document.getElementById('signupBtn');
@@ -37,7 +37,19 @@ function signUp(event) {
         });
 }
 
-// call functions
 
+// Validations
+
+function validatePass() {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('passwordconfirm').value;
+    if (password !== confirmPassword) {
+        window.alert('Passwords do not match.');
+        return false;
+    }
+    return true;
+}
+
+// Listen to events and call functions
 
 signup.addEventListener('click', signUp);
