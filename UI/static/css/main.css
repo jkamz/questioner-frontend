@@ -296,8 +296,8 @@ height: 590px; */
 
  #form-container-meetup {
      width: 330px;
-     height: 400px;
-     margin-top: -200px;
+     /*height: 400px;*/
+     margin-top: -230px;
      margin-left: -160px;
      top: 50%;
      left: 50%;
