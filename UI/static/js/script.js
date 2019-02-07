@@ -1,30 +1,3 @@
-// Email validation message
-
-const email = document.getElementById('email');
-
-email.addEventListener('input', function () {
-    if (email.validity.typeMismatch) {
-        email.setCustomValidity('Not valid email');
-    } else {
-        email.setCustomValidity('');
-    }
-});
-
-
-function Validate() {
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('passwordconfirm').value;
-    if (password !== confirmPassword) {
-        alert('Passwords do not match.');
-        return false;
-    }
-    return true;
-}
-
-window.onload = function () {
-    document.getElementById('signupBtn').addEventListener('click', Validate);
-};
-
 
 /* function hideCreateButton(argument) {
     x = localStorage.getItem('userName');

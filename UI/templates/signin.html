@@ -23,13 +23,13 @@
     </header>
     <main>
         <div id="form-container">
-            <form action="index.html">
+            <form>
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" required="">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required="">
                 <div id="login">
-                    <input type="submit" value="Login">
+                    <input type="submit" value="Login" id="signinBtn">
                 </div>
                 <div id="signup-text">
                     <p>Don't have an account yet? <a href="signup.html">Sign Up</a></p>
@@ -37,7 +37,7 @@
             </form>
         </div>
     </main>
-<script type="text/javascript" src="../static/js/script.js"></script>
+<script type="text/javascript" src="../static/js/login.js"></script>
 </body>
 
 </html>
