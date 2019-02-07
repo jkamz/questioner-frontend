@@ -50,6 +50,20 @@ function validatePass() {
     return true;
 }
 
+// email
+
+const email = document.getElementById('email');
+
+email.addEventListener('input', () => {
+    isValidEmail = email.checkValidity();
+
+    if (isValidEmail) {
+        signup.disabled = false;
+    } else {
+        signup.disabled = true;
+    }
+});
+
 // Listen to events and call functions
 
 signup.addEventListener('click', signUp);
