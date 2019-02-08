@@ -25,9 +25,19 @@ function createMeetup(event) {
         .then((data) => {
             if (data.status === 201) {
                 console.log(data);
+                window.location.href = '../templates/index.html';
+            } else if (data.status === 422) {
+                const x = data.message[Object.keys(data.message)[0]];
+                window.alert(x);
+                console.log(x);
+            } else if (data.msg === 'Token has expired') {
+                window.alert('Please login to create meetup');
+                window.location.href = '../templates/signin.html';
+            } else if (data.status === 403) {
+                window.alert('Not Allowed. Login as Adminstrator');
+                // window.location.href = "../templates/signin.html";
             } else {
-                let x = data.message[Object.keys(data.message)[0]];
-                window.alert(x)
+                window.alert(data.message);
             }
         })
         .catch((error) => {
