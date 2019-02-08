@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questioner | New Meetup</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
 </head>
 
@@ -26,17 +28,17 @@
         <div id="form-container-meetup">
             <form>
                 <label for="title">Topic:</label>
-                <input type="text" id="title" name="title">
+                <input type="text" id="topic" required>
                 <label for="host">Host:</label>
                 <input type="text" id="host" name="host">
                 <label for="summary">Summary:</label>
-                <input type="text" name="summary" placeholder="enter meetup summary here">
-                <label for="description">Location:</label>
-                <input type="text" name="description" placeholder="enter meetup location here">\
-                <label for="description">Date:</label>
-                <input type="text" name="description" placeholder="enter meetup happening on date here">
+                <input type="text" id="summary" placeholder="enter meetup summary here" required>
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="enter meetup location here" required>
+                <label for="date">Date & Time:</label>
+                <input type="text" name="date" id="date" value="2019-04-22 12:00" required>
                 <div id="post-comment">
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" id="meetupBtn">
                 </div>
                 <div id="signup-text">
                     <p><a href="index.html">Go Back</a></p>
@@ -44,6 +46,17 @@
             </form>
         </div>
     </main>
+<script type="text/javascript" src="../static/js/newmeetup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script type="text/javascript">
+const date = document.getElementById('date');
+flatpickr(date, {
+    enableTime: true,
+    dateFormat: 'Y-m-d H:i',
+    time_24hr: true,
+    disableMobile: true,
+});
+</script>
 </body>
 
 </html>
