@@ -14,7 +14,6 @@ function upcomingMeetups() {
                 let meetups = data.meetups;
                 meetups.reverse();
                 for (let x = 0; x < meetups.length; x++) {
-                    topics.push(meetups[x].topic);
                     for (let i = 0; i < titles.length; i++) {
                         titles.item(i).innerHTML = meetups[i].topic;
                     }
