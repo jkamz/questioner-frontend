@@ -16,4 +16,4 @@ function hideCreateButton() {
     }
 }
 
-window.onload = hideCreateButton;
+window.addEventListener('load', hideCreateButton);
