@@ -129,7 +129,8 @@
      font-size: 15px;
      line-height: 10px;
      text-align: center;
-     text-transform: uppercase;
+     /*text-transform: uppercase;*/
+     color: #000;
  }
 
  @media only screen and (min-width: 1000px) {

@@ -18,8 +18,8 @@ function upcomingMeetups() {
                 for (let x = 0; x < meetups.length; x++) {
                     for (let i = 0; i < titles.length; i++) {
                         titles.item(i).innerHTML = meetups[i].topic;
-                        locations.item(i).innerHTML = `Location: ${meetups[i].location}`;
-                        dates.item(i).innerHTML = `Date: ${meetups[i].happeningon}`;
+                        locations.item(i).innerHTML = `location: ${meetups[i].location}`;
+                        dates.item(i).innerHTML = `Happening On: ${meetups[i].happeningon}`;
                     }
                 }
             }
