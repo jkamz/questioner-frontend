@@ -3,6 +3,7 @@ function upcomingMeetups() {
     let titles = document.getElementsByClassName('meetuptitle');
     let locations = document.getElementsByClassName('location');
     let dates = document.getElementsByClassName('date');
+    let meetupsdiv = document.getElementsByClassName('meetup');
 
     fetch(url, {
         method: 'GET',
@@ -20,6 +21,7 @@ function upcomingMeetups() {
                         titles.item(i).innerHTML = meetups[i].topic;
                         locations.item(i).innerHTML = `location: ${meetups[i].location}`;
                         dates.item(i).innerHTML = `Happening On: ${meetups[i].happeningon}`;
+                        meetupsdiv.item(i).setAttribute('id', meetups[i].meetup_id);
                     }
                 }
             }
