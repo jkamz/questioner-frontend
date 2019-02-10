@@ -124,6 +124,7 @@
      line-height: 50px;
      text-align: center;
      text-transform: uppercase;
+     cursor: pointer;
  }
   .box p {
      font-size: 15px;
