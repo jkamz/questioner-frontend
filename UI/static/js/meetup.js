@@ -7,6 +7,7 @@ function Meetup() {
     const title = document.getElementById('title');
     const host = document.getElementById('host');
     const summary = document.getElementById('summary');
+    const date = document.getElementById('date');
 
     fetch(url, {
         method: 'GET',
@@ -18,9 +19,11 @@ function Meetup() {
         .then((data) => {
             if (data.status === 200) {
                 const meetupObj = data.meetup;
+                const dateFormated = meetupObj.happeningon.toString();
                 title.innerHTML = meetupObj.topic;
                 host.innerHTML = meetupObj.host;
                 summary.innerHTML = meetupObj.summary;
+                date.innerHTML = dateFormated;
             } else {
                 window.alert(data.message);
             }
