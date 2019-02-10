@@ -621,7 +621,7 @@ height: 590px; */
          border: solid #ccc;
          color: #000;
          width: 25%;
-         margin-top: -30%;
+         margin-top: 10px;
      }
 
      .host {
