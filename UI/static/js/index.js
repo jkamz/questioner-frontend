@@ -2,10 +2,9 @@
 
 // Save meetup ID to help visit specific meetup page
 const meetupDetails = (id) => {
-    // event.preventDefault();
-    // event.stopPropagation();
     localStorage.setItem('meetup_id', id);
     window.location.href = 'meetup.html';
+    return false;
 };
 
 // fetch upcoming meetups and render to html
@@ -27,7 +26,6 @@ function upcomingMeetups() {
             if (data.message === 'success') {
                 const meetupsArr = data.meetups;
                 meetupsArr.reverse();
-                // for (let x = 0; x < meetupsArr.length; x += 1) {
                 for (let i = 0; i < titles.length; i += 1) {
                     titles.item(i).innerHTML = meetupsArr[i].topic;
                     locations.item(i).innerHTML = `location: ${meetupsArr[i].location}`;
@@ -35,11 +33,12 @@ function upcomingMeetups() {
                     meetupsdiv.item(i).setAttribute('id', meetupsArr[i].meetup_id);
                     document.getElementById(meetupsArr[i].meetup_id).addEventListener('click', () => { meetupDetails(meetupsArr[i].meetup_id); });
                 }
-                // }
-                // for (let meetup of meetupsArr) {
-                //     document.getElementById(meetup.meetup_id).addEventListener('click', meetupDetails);
-            // }
+            } else {
+                window.alert(data.message);
             }
+        })
+        .catch((error) => {
+            console.error(error);
         });
 }
 
