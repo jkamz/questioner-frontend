@@ -1,4 +1,10 @@
 
+const questionDetails = (id) => {
+    localStorage.setItem('question_id', id);
+    window.location.href = 'comments.html';
+    return false;
+};
+
 const meetupId = localStorage.getItem('meetup_id');
 
 function Meetup() {
@@ -36,33 +42,31 @@ function Meetup() {
                         if (data1.message === 'success') {
                             const questionObj = data1.questions;
                             console.log(questionObj);
-                            result = '';
-                            for (let item of questionObj) {
-                                result +=
-                                `<div class="question">
-                                    <div class="question-no">Q.1</div>
+                            let result = '';
+                            for (let i = 0; i < questionObj.length; i += 1) {
+                                result += `<div class="question">
+                                    <div class="question-no">Q.${i + 1}</div>
                                     <div class="upvotes">
                                         <a href="#"><div class="arrow up"></div></a>
-                                        <div class="votes">${item.votes}</div>
+                                        <div class="votes">${questionObj[i].votes}</div>
                                         <a href="#"><div class="arrow down"></div></a>
                                     </div>
                                     <div class="question-body">
-                                        <a href="comments.html" class="question-details">${item.body}</a>
-                                        <p>Submitted by <a href="#" class="submittedby">${item.author}</a> at 12:23pm</p>
+                                        <a href="comments.html" id = "${questionObj[i].question_id}" onclick = "questionDetails(${questionObj[i].question_id})" class="question-details">${questionObj[i].body}</a>
+                                        <p>Submitted by <a href="#" class="submittedby">${questionObj[i].author}</a> at 12:23pm</p>
                                         <div class="question-options">
-                                            <span><a href="comments.html">5 Comments</a></span>
+                                            <span><a href="comments.html">Comments</a></span>
                                             <span>Report</span>
                                         </div>
                                     </div>
-                                </div>`
+                                </div>`;
                             }
                             document.getElementById('results').innerHTML = result;
                         }
                     });
-
-            } else {
-                window.alert(data.message);
-            }
+            } // else {
+            window.alert(data.message);
+            // }
         })
         .catch((error) => {
             console.error(error);
