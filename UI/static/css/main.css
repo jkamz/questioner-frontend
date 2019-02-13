@@ -124,6 +124,7 @@
      line-height: 50px;
      text-align: center;
      text-transform: uppercase;
+     cursor: pointer;
  }
   .box p {
      font-size: 15px;
@@ -620,7 +621,7 @@ height: 590px; */
          border: solid #ccc;
          color: #000;
          width: 25%;
-         margin-top: -30%;
+         margin-top: 10px;
      }
 
      .host {
