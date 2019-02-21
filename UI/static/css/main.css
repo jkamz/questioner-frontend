@@ -652,38 +652,7 @@ height: 590px; */
      margin: 5em auto;
  }
 
- .comments-container>ul,
- li {
-     list-style: none;
- }
 
- ul.nested-comment li {
-     margin-left: 3em;
- }
-
- div.comment {
-     background-color: #f0f0f0;
-     border: 1px solid #999;
-     padding: .5em;
-     margin-bottom: 1em;
- }
-
- em {
-     font-size: 0.75em;
- }
-
- ul.nested-comment li ul {
-     border-left: 1px solid #999;
-     position: relative;
- }
-
- ul.nested-comment li ul::before {
-     content: '';
-     border-bottom: 1px solid #999;
-     position: absolute;
-     width: 2em;
-     top: 2em;
- }
 
  @media only screen and (min-width: 1000px) {
      div.comments-container {
