@@ -697,6 +697,10 @@ height: 590px; */
      border: 1px solid #BBB;
  }
 
+ .comments-loading {
+    text-align: center;
+ }
+
  @media only screen and (min-width: 1000px) {
      div.comments-container {
          /*width: 800px;*/
