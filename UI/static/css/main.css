@@ -487,7 +487,7 @@ height: 590px; */
  .question {
      display: grid;
      grid-template-columns: 1fr 1fr 7fr;
-     grid-auto-rows: 200px;
+     /*grid-auto-rows: 200px;*/
  }
 
  .question-no {
@@ -591,7 +591,7 @@ height: 590px; */
      .question {
          display: grid;
          grid-template-columns: 1fr 1fr 7fr;
-         grid-auto-rows: 150px;
+         /*grid-auto-rows: 150px;*/
      }
 
      .question-details {
@@ -657,7 +657,7 @@ height: 590px; */
  div.comments-container {
      /*width: 350px;*/
      width: 100%;
-     margin: 5em auto;
+     margin: 4em auto;
  }
 
  .title-comments {
@@ -701,7 +701,7 @@ height: 590px; */
      div.comments-container {
          /*width: 800px;*/
          width: 100%;
-         margin: 3em auto;
+         margin: 2em auto;
      }
 
      .title-comments {
