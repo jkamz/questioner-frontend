@@ -490,6 +490,7 @@ height: 590px; */
      font-size: 25px;
      color: grey;
      text-align: left;
+     visibility: hidden;
  }
 
 
@@ -598,6 +599,7 @@ height: 590px; */
          font-size: 30px;
          color: grey;
          text-align: right;
+         visibility: visible;
      }
 
      .user-actions {
@@ -652,13 +654,23 @@ height: 590px; */
      margin: 5em auto;
  }
 
-
+.title-comments {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
 
  @media only screen and (min-width: 1000px) {
      div.comments-container {
          width: 800px;
-         margin: 5em auto;
+         margin: 3em auto;
      }
+
+     .title-comments {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
  }
 
  /*Profile*/
