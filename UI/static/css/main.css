@@ -698,7 +698,11 @@ height: 590px; */
  }
 
  .comments-loading {
-    text-align: center;
+     text-align: center;
+ }
+
+ .comments {
+     margin-left: 5%;
  }
 
  @media only screen and (min-width: 1000px) {
@@ -712,6 +716,10 @@ height: 590px; */
          text-align: center;
          font-size: 25px;
          font-weight: bold;
+     }
+
+     .comments {
+         margin-left: 20%;
      }
  }
 
