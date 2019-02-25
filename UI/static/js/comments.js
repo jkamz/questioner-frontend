@@ -15,6 +15,7 @@ function getComments() {
         .then(response => response.json())
         .then((data) => {
             const commentsObj = data.comments;
+            commentsObj.reverse();
             let result = '';
             commentsObj.forEach((comment) => {
                 const dateObj = comment.created_on;
@@ -26,6 +27,7 @@ function getComments() {
                 </div>`;
             });
             document.getElementById('comments').innerHTML = result;
+            spinner.style.display = 'none';
             console.log(commentsObj);
         });
 }
