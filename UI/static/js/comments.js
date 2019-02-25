@@ -39,6 +39,7 @@ function getQuestion() {
     const author = document.querySelector('#question-author');
     const time = document.querySelector('#question-time');
     const votes = document.querySelector('#question-votes');
+    const submitted = document.querySelector('#submittedby');
     fetch(questionUrl)
         .then(response => response.json())
         .then((data) => {
@@ -51,7 +52,6 @@ function getQuestion() {
             author.innerHTML = questionObj.author;
             time.innerHTML = `at ${dateFormated}`;
             votes.innerHTML = questionObj.votes;
-
-            console.log(questionObj);
+            submitted.innerHTML = 'Submitted By ';
         });
 }
