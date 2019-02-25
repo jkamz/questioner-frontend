@@ -17,11 +17,15 @@ function getComments() {
             const commentsObj = data.comments;
             let result = '';
             commentsObj.forEach((comment) => {
+                const dateObj = comment.created_on;
+                const dateToFormat = new Date(dateObj);
+                const dateFormated = dateToFormat.toLocaleString();
                 result += `<div class="single-comment">
                     <a href="#" class="question-details">${comment.body}</a>
-                    <p>Submitted by <a href="#" class="submittedby">${comment.author}</a> at 12:23pm</p>
+                    <p>Submitted by <a href="#" class="submittedby">${comment.author}</a> at ${dateFormated}</p>
                 </div>`;
             });
+            document.getElementById('comments').innerHTML = result;
             console.log(commentsObj);
         });
 }
