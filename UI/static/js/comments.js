@@ -15,6 +15,13 @@ function getComments() {
         .then(response => response.json())
         .then((data) => {
             const commentsObj = data.comments;
+            let result = '';
+            commentsObj.forEach((comment) => {
+                result += `<div class="single-comment">
+                    <a href="#" class="question-details">${comment.body}</a>
+                    <p>Submitted by <a href="#" class="submittedby">${comment.author}</a> at 12:23pm</p>
+                </div>`;
+            });
             console.log(commentsObj);
         });
 }
