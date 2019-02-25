@@ -703,6 +703,11 @@ height: 590px; */
 
  .comments {
      margin-left: 5%;
+     margin-right: 5px;
+ }
+
+ .single-comment {
+    margin-bottom: 5%;
  }
 
  @media only screen and (min-width: 1000px) {
