@@ -31,3 +31,7 @@ function getComments() {
             console.log(commentsObj);
         });
 }
+
+function getQuestion() {
+
+}
