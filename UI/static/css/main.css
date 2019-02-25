@@ -676,8 +676,7 @@ height: 590px; */
 
  textarea {
      min-height: 4rem;
-     padding-top: 0.4rem;
-     padding-bottom: 0.4rem;
+     padding: 0.4rem;
      resize: vertical;
      margin-bottom: 1rem;
      width: 50%;
