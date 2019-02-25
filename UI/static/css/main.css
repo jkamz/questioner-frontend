@@ -702,12 +702,13 @@ height: 590px; */
  }
 
  .comments {
-     margin-left: 5%;
-     margin-right: 5px;
+
+     width: 80%;
+     margin: 0 auto;
  }
 
  .single-comment {
-    margin-bottom: 5%;
+    margin-top: 5%;
  }
 
  @media only screen and (min-width: 1000px) {
@@ -723,9 +724,6 @@ height: 590px; */
          font-weight: bold;
      }
 
-     .comments {
-         margin-left: 20%;
-     }
  }
 
  /*Profile*/
