@@ -56,7 +56,6 @@ function Meetup() {
                                         <p>Submitted by <a href="#" class="submittedby">${questionObj[i].author}</a> at 12:23pm</p>
                                         <div class="question-options">
                                             <span><a href="comments.html">Comments</a></span>
-                                            <span>Report</span>
                                         </div>
                                     </div>
                                 </div>`;
