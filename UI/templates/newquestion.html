@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questioner | Welcome</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
 </head>
 
@@ -16,26 +17,22 @@
         </a>
         <nav>
             <ul>
-                <li><a class="state" href="signup.html">John Doe</a></li>
+                <li><a class="state" href="signup.html"></a></li>
                 <li><a href="index.html">Home</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Add New Question to the Meetup</h1>
         <div id="form-container-question">
             <form>
-                <input type="text" name="question" placeholder="enter question here">
+                <textarea id="new-question" name="question" placeholder="Add new question here"></textarea>
                 <div id="post-question">
-                    <input type="submit" value="Submit">
-                </div>
-                <div id="signup-text">
-                    <p><a href="meetup.html">Go Back</a></p>
+                    <button class="button-question"><i id="question-loader" class="fa fa-spinner fa-spin"></i>Submit</button>
                 </div>
             </form>
         </div>
     </main>
-<script type="text/javascript" src="../static/js/script.js"></script>
+<script type="text/javascript" src="../static/js/newquestion.js"></script>
 </body>
 
 </html>
