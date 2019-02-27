@@ -3,13 +3,51 @@ const form = document.querySelector('form');
 const spinner = document.querySelector('.comments-loading');
 const commentsUrl = `https://questionerandela.herokuapp.com/api/v2/questions/${questionId}/comments`;
 const questionUrl = `https://questionerandela.herokuapp.com/api/v2/questions/${questionId}`;
+const token = localStorage.getItem('token');
 spinner.style.display = '';
 
-getComments();
-getQuestion();
+function checkToken() {
+    if (token === null) {
+        window.alert('Please login to add comment');
+        window.location.href = '../templates/signin.html';
+    }
+}
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+    checkToken();
+    const formData = new FormData(form);
+    const body = formData.get('comment');
+    const fieldData = {
+        body,
+    };
+
+    form.style.display = 'none';
+    spinner.style.display = '';
+
+    fetch(commentsUrl, {
+        method: 'POST',
+        body: JSON.stringify(fieldData),
+        headers: {
+            'content-type': 'application/json',
+            Authorization: `Bearer ${token}`,
+        },
+    })
+        .then(response => response.json())
+        .then((data) => {
+            if (data.status === 201) {
+                getComments();
+            } else if (data.msg === 'Token has expired') {
+                window.alert('Please login to add comment');
+                window.location.href = '../templates/signin.html';
+            } else {
+                let y = data.message[Object.keys(data.message)[0]];
+                window.alert(y);
+            }
+            form.reset();
+            form.style.display = '';
+            spinner.style.display = 'none';
+        });
 });
 
 function getComments() {
@@ -24,7 +62,7 @@ function getComments() {
                 const dateToFormat = new Date(dateObj);
                 const dateFormated = dateToFormat.toLocaleString();
                 result += `<div class="single-comment">
-                    <a href="#" class="question-details">${comment.body}</a>
+                    <p href="#" class="question-details">${comment.body}</p>
                     <p>Submitted by <a href="#" class="submittedby">${comment.author}</a> at ${dateFormated}</p>
                 </div>`;
             });
@@ -55,3 +93,6 @@ function getQuestion() {
             submitted.innerHTML = 'Submitted By ';
         });
 }
+
+getComments();
+getQuestion();
