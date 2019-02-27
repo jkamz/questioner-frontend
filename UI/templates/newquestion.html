@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questioner | Welcome</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
 </head>
 
@@ -26,7 +27,7 @@
             <form>
                 <textarea id="new-question" name="question" placeholder="Add new question here"></textarea>
                 <div id="post-question">
-                    <input type="submit" value="Submit">
+                    <button class="button-question"><i id="question-loader" class="fa fa-spinner fa-spin"></i>Submit</button>
                 </div>
             </form>
         </div>
