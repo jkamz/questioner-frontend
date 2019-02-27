@@ -44,7 +44,7 @@ form.addEventListener('submit', (event) => {
                 let y = data.message[Object.keys(data.message)[0]];
                 window.alert(y);
             }
-
+            form.reset();
             form.style.display = '';
             spinner.style.display = 'none';
         });
@@ -62,7 +62,7 @@ function getComments() {
                 const dateToFormat = new Date(dateObj);
                 const dateFormated = dateToFormat.toLocaleString();
                 result += `<div class="single-comment">
-                    <a href="#" class="question-details">${comment.body}</a>
+                    <p href="#" class="question-details">${comment.body}</p>
                     <p>Submitted by <a href="#" class="submittedby">${comment.author}</a> at ${dateFormated}</p>
                 </div>`;
             });
