@@ -47,9 +47,9 @@ function Meetup() {
                                 result += `<div class="question">
                                     <div class="question-no">Q.${i + 1}</div>
                                     <div class="upvotes">
-                                        <a href="#"><div class="arrow up"></div></a>
+                                        <a href="#"><div class="arrow up" id = "uv${questionObj[i].question_id}"></div></a>
                                         <div class="votes">${questionObj[i].votes}</div>
-                                        <a href="#"><div class="arrow down"></div></a>
+                                        <a href="#"><div class="arrow down" id = "dv${questionObj[i].question_id}"></div></a>
                                     </div>
                                     <div class="question-body">
                                         <a href="comments.html" id = "${questionObj[i].question_id}" onclick = "questionDetails(${questionObj[i].question_id})" class="question-details">${questionObj[i].body}</a>
@@ -61,6 +61,7 @@ function Meetup() {
                                 </div>`;
                             }
                             document.getElementById('results').innerHTML = result;
+
                         }
                     });
             } // else {
@@ -71,5 +72,7 @@ function Meetup() {
             console.error(error);
         });
 }
+
+
 
 window.addEventListener('load', Meetup);
