@@ -8,6 +8,13 @@ const questionDetails = (id) => {
 const meetupId = localStorage.getItem('meetup_id');
 const token = localStorage.getItem('token');
 
+function checkToken() {
+    if (token === null) {
+        window.alert('Please login to vote');
+        window.location.href = '../templates/signin.html';
+    }
+}
+
 function Meetup() {
 
     const url = `https://questionerandela.herokuapp.com/api/v2/meetups/${meetupId}`;
@@ -49,7 +56,7 @@ function Meetup() {
                                     <div class="question-no">Q.${i + 1}</div>
                                     <div class="upvotes">
                                         <a href="#"><div class="arrow up" id = "uv${questionObj[i].question_id}"></div></a>
-                                        <div class="votes">${questionObj[i].votes}</div>
+                                        <div id="votes${questionObj[i].question_id}" class="votes">${questionObj[i].votes}</div>
                                         <a href="#"><div class="arrow down" id = "dv${questionObj[i].question_id}"></div></a>
                                     </div>
                                     <div class="question-body">
@@ -79,8 +86,11 @@ function Meetup() {
 
 const upvoteQuestion = (event) => {
     event.preventDefault();
+    checkToken();
     const questionId = event.target.id.slice(2);
     const upvoteUrl = `https://questionerandela.herokuapp.com/api/v2/questions/${questionId}/upvote`;
+    let votes = document.getElementById(`votes${questionId}`).innerHTML;
+    let value = Number(votes);
 
     fetch(upvoteUrl, {
         method: 'PATCH',
@@ -91,10 +101,19 @@ const upvoteQuestion = (event) => {
     })
         .then(response => response.json())
         .then((data) => {
-            if (data.status === 200) {
-                window.location = window.location;
-            } else if (data.msg === 'Token has expired') {
+            if (data.msg === 'Token has expired') {
                 window.alert('Please log in to vote');
+
+            } else if (data.data[1].message === 'removed upvote successfully') {
+                const newValue = value - 1;
+                document.getElementById(`votes${questionId}`).innerHTML = newValue;
+                console.log(newValue);
+
+
+            } else if (data.data[1].message === 'upvote successful') {
+                const newValue = value + 1;
+                document.getElementById(`votes${questionId}`).innerHTML = newValue;
+                console.log(newValue);
             }
         });
 };
