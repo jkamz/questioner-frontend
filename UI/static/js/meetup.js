@@ -61,7 +61,10 @@ function Meetup() {
                                 </div>`;
                             }
                             document.getElementById('results').innerHTML = result;
-
+                            questionObj.forEach((item) => {
+                                document.getElementById(`uv${item.question_id}`).addEventListener('click', upvoteQuestion);
+                                document.getElementById(`dv${item.question_id}`).addEventListener('click', downvoteQuestion);
+                            });
                         }
                     });
             } // else {
@@ -73,6 +76,14 @@ function Meetup() {
         });
 }
 
+const upvoteQuestion = (event) => {
+    event.preventDefault();
 
+
+};
+
+const downvoteQuestion = (event) => {
+    event.preventDefault();
+};
 
 window.addEventListener('load', Meetup);
