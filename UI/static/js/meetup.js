@@ -106,17 +106,16 @@ const upvoteQuestion = (event) => {
         .then((data) => {
             if (data.msg === 'Token has expired') {
                 window.alert('Please log in to vote');
-
             } else if (data.data[1].message === 'removed upvote successfully') {
                 const newValue = value - 1;
                 document.getElementById(`votes${questionId}`).innerHTML = newValue;
                 console.log(newValue);
-
-
+                upv.classList.remove('voteColor');
             } else if (data.data[1].message === 'upvote successful') {
                 const newValue = value + 1;
                 document.getElementById(`votes${questionId}`).innerHTML = newValue;
                 console.log(newValue);
+                upv.classList.add('voteColor');
             }
 
             upv.classList.remove('isDisabled');

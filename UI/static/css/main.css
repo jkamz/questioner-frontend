@@ -957,3 +957,7 @@ height: 590px; */
      pointer-events: none;
      text-decoration: none;
  }
+
+ .voteColor {
+    color: red;
+ }
