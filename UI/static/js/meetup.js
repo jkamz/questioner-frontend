@@ -89,8 +89,11 @@ const upvoteQuestion = (event) => {
     checkToken();
     const questionId = event.target.id.slice(2);
     const upvoteUrl = `https://questionerandela.herokuapp.com/api/v2/questions/${questionId}/upvote`;
+    let upv = document.getElementById(`uv${questionId}`);
     let votes = document.getElementById(`votes${questionId}`).innerHTML;
     let value = Number(votes);
+
+    upv.classList.add('isDisabled');
 
     fetch(upvoteUrl, {
         method: 'PATCH',
@@ -115,6 +118,8 @@ const upvoteQuestion = (event) => {
                 document.getElementById(`votes${questionId}`).innerHTML = newValue;
                 console.log(newValue);
             }
+
+            upv.classList.remove('isDisabled');
         });
 };
 

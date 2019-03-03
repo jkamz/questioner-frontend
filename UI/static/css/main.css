@@ -950,7 +950,7 @@ height: 590px; */
  /* Voting Buttons */
 
  .isDisabled {
-     cursor: not-allowed;
+     cursor: none;
      opacity: 0.5;
      color: currentColor;
      display: inline-block;
