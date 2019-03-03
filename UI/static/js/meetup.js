@@ -6,6 +6,7 @@ const questionDetails = (id) => {
 };
 
 const meetupId = localStorage.getItem('meetup_id');
+const token = localStorage.getItem('token');
 
 function Meetup() {
 
@@ -78,8 +79,24 @@ function Meetup() {
 
 const upvoteQuestion = (event) => {
     event.preventDefault();
+    const questionId = event.target.id.slice(2);
+    const upvoteUrl = `https://questionerandela.herokuapp.com/api/v2/questions/${questionId}/upvote`;
 
-
+    fetch(upvoteUrl, {
+        method: 'PATCH',
+        headers: {
+            'content-type': 'application/json',
+            Authorization: `Bearer ${token}`,
+        },
+    })
+        .then(response => response.json())
+        .then((data) => {
+            if (data.status === 200) {
+                window.location = window.location;
+            } else if (data.msg === 'Token has expired') {
+                window.alert('Please log in to vote');
+            }
+        });
 };
 
 const downvoteQuestion = (event) => {
