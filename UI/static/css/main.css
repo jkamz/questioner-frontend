@@ -589,7 +589,7 @@ height: 590px; */
  }
 
  .button-question {
-    display: inline-block;
+     display: inline-block;
      height: 2.5rem;
      padding: 0 1.9rem;
      font-weight: 600;
@@ -602,7 +602,7 @@ height: 590px; */
  }
 
  #question-loader {
-    display: none;
+     display: none;
  }
 
  @media only screen and (min-width: 1000px) {
@@ -942,7 +942,18 @@ height: 590px; */
      vertical-align: middle;
  }
 
-.fa {
-  margin-left: -12px;
-  margin-right: 8px;
-}
+ .fa {
+     margin-left: -12px;
+     margin-right: 8px;
+ }
+
+ /* Voting Buttons */
+
+ .isDisabled {
+     cursor: not-allowed;
+     opacity: 0.5;
+     color: currentColor;
+     display: inline-block;
+     pointer-events: none;
+     text-decoration: none;
+ }
