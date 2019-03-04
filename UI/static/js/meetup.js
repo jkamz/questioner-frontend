@@ -124,6 +124,40 @@ const upvoteQuestion = (event) => {
 
 const downvoteQuestion = (event) => {
     event.preventDefault();
+    checkToken();
+    const questionId = event.target.id.slice(2);
+    const downvoteUrl = `https://questionerandela.herokuapp.com/api/v2/questions/${questionId}/downvote`;
+    let dv = document.getElementById(`dv${questionId}`);
+    let votes = document.getElementById(`votes${questionId}`).innerHTML;
+    let value = Number(votes);
+
+    dv.classList.add('isDisabled');
+
+    fetch(downvoteUrl, {
+        method: 'PATCH',
+        headers: {
+            'content-type': 'application/json',
+            Authorization: `Bearer ${token}`,
+        },
+    })
+        .then(response => response.json())
+        .then((data) => {
+            if (data.msg === 'Token has expired') {
+                window.alert('Please log in to vote');
+            } else if (data.data[1].message === 'removed downvote successfully') {
+                const newValue = value + 1;
+                document.getElementById(`votes${questionId}`).innerHTML = newValue;
+                console.log(newValue);
+                dv.classList.remove('voteColor');
+            } else if (data.data[1].message === 'downvote successful') {
+                const newValue = value - 1;
+                document.getElementById(`votes${questionId}`).innerHTML = newValue;
+                console.log(newValue);
+                dv.classList.add('voteColor');
+            }
+
+            dv.classList.remove('isDisabled');
+        });
 };
 
 window.addEventListener('load', Meetup);
